@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>キツネ村のすゝめ</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Bootstrap、pluginのCSS読み込み -->
+	<link href="css/colorbox.css" rel="stylesheet">
+	<link href="css/jquery.bxslider.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/drawer.min.css">
+	<!-- jQuery読み込み -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+	<!-- colorbox.jsの読み込み -->
+	<script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
+	<!-- bxslider.jsの読み込み -->
+	<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+	<!-- backstretcj.jsの読み込み -->
+	<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+	<!-- drawer.jsの読み込み -->
+	<script src="js/drawer.min.js"></script>
+
+	<!-- 各プラグインの動作 -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.bxslider').bxSlider();
+
+			$.backstretch("images/fox-bg.JPG");
+
+			$('.lightbox').colorbox({
+				inline: true
+			});
+
+			$(".drawer").drawer();
+
+			var headerHight = 70;
+			$('nav').find('a[href^=#]').click(function(){
+				var href= $(this).attr("href");
+				var target = $(href == "#" || href == "" ? 'html' : href);
+				var positionL = target.offset().top-headerHight;
+				$("html, body").animate({scrollTop:positionL});
+				$('.drawer').drawer('close');
+				return false;
+			});
+
+
+		});
+	</script>
+</head>
+<body class="drawer drawer--left">
+	<header>
+		<button type="button" class="drawer-toggle drawer-hamburger">
+			<span class="sr-only">toggle navigation</span>
+			<span class="drawer-hamburger-icon"></span>
+		</button>
+		<span class="title">キツネ村のすゝめ</span>
+	</header>
+	<div class="container">
+		<div class="head-gallery">
+			<ul class="bxslider">
+				<li><img src="images/fox01.JPG"></li>
+				<li><img src="images/fox02.JPG"></li>
+				<li><img src="images/fox03.JPG"></li>
+			</ul>
+		</div>
+		<div class="main" id="about">
+			<h3>キツネ村とは？</h3>
+			<p>
+				キツネ村とは、宮城県白石市にある『キツネをメインとした動物園』です。<br>
+				100頭を超えるキツネが放し飼いにされており、網越しなどではなく間近でキツネの姿を拝むことができます。<br>
+				キツネ同士が毛づくろいをしあったり、喧嘩したり、時には走り回って鳴き声をあげたり……。<br>
+				他では見ることのできない、生のキツネの姿がそこにはあります。
+			</p>
+			<a href="#content01" class="lightbox">仲が良いキツネたちの様子</a>
+		</div>
+		<div class="main" id="point">
+			<h3>キツネ村の良いところ</h3>
+			<p>
+				何と言っても<strong>他では見ることのできないキツネの姿を存分に堪能できる</strong>ことでしょう。<br>
+				そもそもキツネとは、その知名度があり、かつ野生の姿をそこまで頻繁に見れるものでもないにも関わらず、展示していない動物園が多数あります。<br>
+				そんなキツネを存分に、しかも檻の中ではなくすぐそば、目の前で見ることができる！<br>
+				これだけでキツネ村に出向く価値は十分にあります。<br>
+				ですがもちろん、キツネ村の魅力はそれだけではありません。
+			</p>
+			<a href="#content02" class="lightbox">喧嘩？おしゃべり？</a>
+		</div>
+		<div class="main" id="good">
+			<h3>ここがすごい！キツネ村</h3>
+			<ul>
+				<li>キツネに餌をあげることができます</li>
+				<li>キツネを抱っこして写真が撮れます</li>
+				<li>時期によっては子狐にも出会えます</li>
+				<li>僻地にあるのであまり混雑しません</li>
+			</ul>
+			<span>100頭近いキツネたちとたくさん触れ合って『キツネ充』しましょう！</span>
+			<a href="#content03" class="lightbox">もふもふのキツネたちを堪能♪</a>
+		</div>
+		<div class="main" id="howtogo">
+			<h3>行ってみよう！キツネ村</h3>
+			<p>
+				キツネ村は山の上の方にあるので、最寄駅などはありません。一番近くの駅でも、車で20分〜30分ほどかかる距離…。<br>
+				ですので、車を運転できる人はレンタカー、そうでない方はキツネ村への送迎バスを使ったり、タクシーで移動するのがよいでしょう。<br>
+				ちなみに私はタクシーを使って行きました。<br>
+			</p>
+			<a href="#content04" class="lightbox">キツネ村の場所はこちら</a>
+			<p>
+				他、行き方については<a href="http://zao-fox-village.com/access" target="_blank">キツネ村公式サイト</a>に詳しく載っていますので参考にしてください！
+			</p>
+		</div>
+	</div>
+	<footer>No Fox, No Life. 2016.08</footer>
+	
+	<div style="display:none">
+		<div id="content01">
+			<img src="images/fox02.JPG">
+		</div>
+	</div>
+	<div style="display:none">
+		<div id="content02">
+			<img src="images/fox04.JPG">
+		</div>
+	</div>
+	<div style="display:none">
+		<div id="content03">
+			<img src="images/fox-bg.JPG">
+		</div>
+	</div>
+	<div style="display:none">
+		<div id="content04">
+			<iframe style="border: 0px currentColor;" frameborder="0" height="450" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d100549.31270430466!2d140.53514966136427!3d38.04321773138048!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8a4412d9ebd89d%3A0x7f2aa32145f6a6d1!2z5pel5pysLCDjgJI5ODktMDczMyDlrq7ln47nnIznmb3nn7PluILnpo_lsqHlhavlrq7lt53ljp_lrZDvvJHvvJHiiJLvvJM!5e0!3m2!1sja!2sjp!4v1433936162050" width="600"></iframe>
+		</div>
+	</div>
+
+	<nav class="drawer-nav">
+		<ul class="drawer-menu">
+			<li><a href="#about">キツネ村とは？</a></li>
+			<li><a href="#point">キツネ村の良いところ</a></li>
+			<li><a href="#good">ここがすごい！キツネ村</a></li>
+			<li><a href="#howtogo">行ってみよう！キツネ村</a></li>
+			<li><a href="#">トップ</a></li>
+		</ul>
+	</div>
+</body>
+</html>
