@@ -74,12 +74,6 @@ footer {
 	margin-bottom: 16px;
 }
 
-#content01,
-#content02,
-#content03,
-#content04 {
-	width: 300px;
-}
 #content04 iframe {
 	width: 100%;
 }
