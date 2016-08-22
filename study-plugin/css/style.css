@@ -51,6 +51,9 @@ footer {
 .head-gallery {
 	margin-top: 30px;
 }
+.head-gallery img {
+	margin: 0 auto;
+}
 .main h3 {
 	text-align: center;
 	color: #333;
