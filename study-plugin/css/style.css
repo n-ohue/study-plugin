@@ -9,8 +9,8 @@ a {
 	color: #888;
 }
 .container {
-	margin-top: 70px!important;
-	margin-bottom: 40px!important;
+	margin-top: 100px!important;
+	margin-bottom: 70px!important;
 }
 header {
 	z-index: 100;
@@ -60,12 +60,11 @@ footer {
 	letter-spacing: 5px;
 	font-weight: normal;
 }
-
 .main {
 	background: rgba(255,255,255,0.8);
 	border-radius: 5px;
 	padding: 6px;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 }
 .main ul {
 	list-style-type: decimal;
@@ -76,12 +75,9 @@ footer {
 	display: block;
 	margin-bottom: 16px;
 }
-
 #content04 iframe {
 	width: 100%;
 }
-
-
 .drawer-nav ul li {
 	margin-bottom: 20px;
 	padding: 10px 0 10px 10px;
